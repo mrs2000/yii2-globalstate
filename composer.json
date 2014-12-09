@@ -1,0 +1,22 @@
+{
+    "name": "mrssoft/yii2-globalstate",
+    "version": "1.0.0",
+    "description": "Save and load global data",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Melnikov Ruslan",
+            "email": "mrs2000@inbox.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "mrssoft\\globalstate\\": ""
+        }
+    }
+}
