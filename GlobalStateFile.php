@@ -11,9 +11,12 @@ class GlobalStateFile extends Component implements GlobalStateInterface
 
     private $_data = null;
 
-    public function get($name, $default = null)
+    public function get($name = null, $default = null)
     {
         $this->read();
+        if ($name === null) {
+            return $this->_data;
+        }
         if (array_key_exists($name, $this->_data))
         {
             return $this->_data[$name];
@@ -21,9 +24,15 @@ class GlobalStateFile extends Component implements GlobalStateInterface
         return $default;
     }
 
-    public function set($name, $value)
+    public function set($name, $value = null)
     {
-        $this->_data[$name] = $value;
+        if (is_array($name)) {
+            foreach ($name as $key => $value) {
+                $this->_data[$key] = $value;
+            }
+        } else {
+            $this->_data[$name] = $value;
+        }
         return $this->write();
     }
 

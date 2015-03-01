@@ -4,15 +4,15 @@ namespace mrssoft\globalstate;
 interface GlobalStateInterface
 {
     /**
-     * @param string $name
+     * @param string|null $name
      * @param null $default
      * @return mixed
      */
-    public function get($name, $default = null);
+    public function get($name = null, $default = null);
 
     /**
-     * @param string $name
-     * @param mixed $value
+     * @param string|array $name
+     * @param mixed|null $value
      */
-    public function set($name, $value);
+    public function set($name, $value = null);
 }
