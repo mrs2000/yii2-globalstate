@@ -9,7 +9,7 @@ class GlobalStateFile extends Component implements GlobalStateInterface
 
     public $path = '@runtime';
 
-    private $_data = null;
+    private $_data;
 
     public function get($name = null, $default = null)
     {
@@ -26,6 +26,7 @@ class GlobalStateFile extends Component implements GlobalStateInterface
 
     public function set($name, $value = null)
     {
+        $this->read();
         if (is_array($name)) {
             foreach ($name as $key => $value) {
                 $this->_data[$key] = $value;
