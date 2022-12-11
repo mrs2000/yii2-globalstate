@@ -1,4 +1,5 @@
-<?
+<?php
+
 namespace mrssoft\globalstate;
 
 use yii\base\Component;
@@ -13,7 +14,7 @@ class GlobalStateDB extends Component implements GlobalStateInterface
 
     public $fieldValue = 'value';
 
-    private $_data = null;
+    private $_data;
 
     public function get($name = null, $default = null)
     {

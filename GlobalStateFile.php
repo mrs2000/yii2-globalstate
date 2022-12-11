@@ -1,4 +1,5 @@
-<?
+<?php
+
 namespace mrssoft\globalstate;
 
 use yii\base\Component;

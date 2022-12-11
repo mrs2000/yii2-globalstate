@@ -1,4 +1,5 @@
-<?
+<?php
+
 namespace mrssoft\globalstate;
 
 interface GlobalStateInterface

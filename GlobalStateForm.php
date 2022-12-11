@@ -1,4 +1,5 @@
-<?
+<?php
+
 namespace mrssoft\globalstate;
 
 class GlobalStateForm extends \yii\base\Model
